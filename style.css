@@ -28,15 +28,19 @@
 }
 body {
   /*shortcut background: color image repeat position/size*/
-  background: var(--bg-url) no-repeat top center/cover;
-  height: 100%;
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  height: 100vh;
 }
 body * {
   color: var(--text-color);
 }
 #container {
   width: 100%;
-  max-width: 500px;
+  max-width: 588px;
   margin: 46px auto 0px;
   padding: 0px 4px;
 }
@@ -48,9 +52,9 @@ body * {
 }
 
 #profile img {
-  width: 112px;
+  width: 110px;
   border-radius: 50%;
-  border: 2.5px solid transparent;
+  border: 2px solid transparent;
   background: linear-gradient(
       45deg,
       rgb(0, 89, 255),
@@ -60,7 +64,7 @@ body * {
     border-box;
   -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
-  mask: 1px;
+  mask: 0px;
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
